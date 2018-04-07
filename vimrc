@@ -96,7 +96,7 @@ filetype plugin indent on    " required
 " Appearance
     " 256 colours terminal support
     set t_Co=256
-    colorscheme monokai
+    colorscheme Monokai
 
     " Pink comments (comments are important, don't overuse them)
     hi Comment ctermfg=200
