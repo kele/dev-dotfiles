@@ -8,6 +8,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" Colorschemes
+Plugin 'flazz/vim-colorschemes'
+
 " Fuzzy search
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -96,7 +99,7 @@ filetype plugin indent on    " required
 " Appearance
     " 256 colours terminal support
     set t_Co=256
-    colorscheme desert
+    colorscheme monokai
 
     " Pink comments (comments are important, don't overuse them)
     hi Comment ctermfg=200
