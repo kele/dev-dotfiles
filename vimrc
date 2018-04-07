@@ -8,9 +8,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Colorschemes
-Plugin 'flazz/vim-colorschemes'
-
 " Fuzzy search
 Plugin 'ctrlpvim/ctrlp.vim'
 
