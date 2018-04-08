@@ -23,6 +23,11 @@ Plugin 'bronson/vim-trailing-whitespace'
 " Seamless Vim/Tmux navigation
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Dim inactive panes in Vim
+Plugin 'blueyed/vim-diminactive'
+" Make dimming inactive panes in Vim possible while in tmux
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+
 " Custom command palette
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 
@@ -185,6 +190,9 @@ filetype plugin indent on    " required
 
       " ag is fast enough that CtrlP doesn't need to cache
       let g:ctrlp_use_caching = 0
+
+    " Dim inactive
+    let g:diminactive_enable_focus = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
