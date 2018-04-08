@@ -169,7 +169,9 @@ filetype plugin indent on    " required
 
     let g:commandPalette = {
         \ 'Save as root': 'w ! sudo tee % > /dev/null',
-        \ 'Strip trailing whitespace': 'call StripTrailingWhitespace()'
+        \ 'Strip trailing whitespace': 'call StripTrailingWhitespace()',
+        \ 'Clang complete: open declaration in preview window': 'call g:ClangGotoDeclarationPreview()',
+        \ 'Clang complete: go to declaration': 'call g:ClangGotoDeclaration()'
         \ }
 
     let g:ctrlp_commandpalette_autoload_commands = 0
@@ -204,6 +206,7 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " C++
 au FileType cpp set tabstop=2 shiftwidth=2 expandtab foldmethod=indent
+
 let g:clang_library_path='/usr/lib/llvm-3.8/lib/libclang.so.1'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
