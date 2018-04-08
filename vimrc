@@ -215,7 +215,7 @@ filetype plugin indent on    " required
 " C++
 au FileType cpp set tabstop=2 shiftwidth=2 expandtab foldmethod=indent
 
-let g:clang_library_path='/usr/lib/llvm-3.8/lib/libclang.so.1'
+let g:clang_library_path='/usr/lib/llvm-4.0/lib/libclang.so.1'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IDE-like key bindings
