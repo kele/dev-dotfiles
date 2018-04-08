@@ -23,7 +23,11 @@ Plugin 'bronson/vim-trailing-whitespace'
 " Seamless Vim/Tmux navigation
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Custom command palette
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
+
+" Clang completion
+Plugin 'Rip-Rip/clang_complete'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,35 +64,35 @@ filetype plugin indent on    " required
   set completeopt=longest,menuone
   set completeopt-=preview                                    " don't show the scratch preview window
 
-  inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+  "inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-  inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-    \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+  "inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  "  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-  inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-    \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+  "inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  "  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-  function CleverCompletion()
-    if &omnifunc != ''
-       return 2
-    elseif &completefunc != ''
-        return 1
-    else
-        return 0
-    endif
-  endfunction
+  "function CleverCompletion()
+  "  if &omnifunc != ''
+  "     return 2
+  "  elseif &completefunc != ''
+  "      return 1
+  "  else
+  "      return 0
+  "  endif
+  "endfunction
 
-  " open omni completion menu closing previous if open and opening new
-  " menu without changing the text
-  inoremap <expr> <C-Space>
-    \ (pumvisible() ?
-    \   (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i')
-    \ : '') .
-    \ (CleverCompletion() == 2 ?
-    \   '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-    \ : (CleverCompletion() == 1 ?
-    \       '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-    \     : '<C-n><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'))
+  "" open omni completion menu closing previous if open and opening new
+  "" menu without changing the text
+  "inoremap <expr> <C-Space>
+  "  \ (pumvisible() ?
+  "  \   (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i')
+  "  \ : '') .
+  "  \ (CleverCompletion() == 2 ?
+  "  \   '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+  "  \ : (CleverCompletion() == 1 ?
+  "  \       '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+  "  \     : '<C-n><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'))
 
   inoremap <C-@> <C-x><C-o>
 
