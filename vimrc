@@ -245,8 +245,12 @@ let g:clang_library_path='/usr/lib/llvm-4.0/lib/libclang.so.1'
     " Custom CtrlP (Command palette)
     nnoremap <leader>t :CtrlPCommandPalette<cr>
 
-    " Search for the current selection (you need to specify the file)
+    " Search for the current selection
     vnoremap <leader>gg y:Ack "<c-r>""
+
+    " Search for word under cursor
+    noremap <leader>gw :Ack <cword><CR>
 
     " Search for the current selection in the current directory subtree
     vnoremap <leader>gc y:Ack "<c-r>"" %:h/**/*
+
