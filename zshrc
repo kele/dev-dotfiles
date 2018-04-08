@@ -1,5 +1,6 @@
-# Run tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+# Run tmux with 256 color support (both TERM and -2 are needed)
+export TERM=xterm-256color
+if [ "$TMUX" = "" ]; then tmux -2; fi
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
