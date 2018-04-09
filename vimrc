@@ -254,3 +254,5 @@ let g:clang_library_path='/usr/lib/llvm-4.0/lib/libclang.so.1'
     " Search for the current selection in the current directory subtree
     vnoremap <leader>gc y:Ack "<c-r>"" %:h/**/*
 
+    " CtrlP is opened using c-f
+    let g:ctrlp_map = '<c-f>'
