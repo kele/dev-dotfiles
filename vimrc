@@ -34,8 +34,9 @@ Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Clang completion
 Plugin 'Rip-Rip/clang_complete'
 
-" Rust completion
+" Rust
 Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
