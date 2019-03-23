@@ -34,6 +34,9 @@ Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Clang completion
 Plugin 'Rip-Rip/clang_complete'
 
+" Rust completion
+Plugin 'rust-lang/rust.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -216,6 +219,10 @@ filetype plugin indent on    " required
 au FileType cpp set tabstop=2 shiftwidth=2 expandtab foldmethod=indent
 
 let g:clang_library_path='/usr/lib/llvm-4.0/lib/libclang.so.1'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Rust
+let g:rustfmt_autosave = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IDE-like key bindings
